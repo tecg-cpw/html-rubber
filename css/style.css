@@ -1,0 +1,341 @@
+@import url(http://fonts.googleapis.com/css?family=Patua+One|Source+Sans+Pro);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***************/
+/*   General   */
+/***************/
+body {
+	margin: 0 auto;
+	width: 960px;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Patua One', cursive;
+}
+article{
+	width: 68%;
+	text-align: justify;
+}
+article figure {
+	text-align: center
+}
+figcaption{
+	font-size: 0.9em;
+	margin: 1em 0em 1.5em 0em;
+}
+aside{
+	position: absolute;
+	top: 147px;
+	width: 25%;
+	right: 0;
+	padding: 2% 2%;
+	background-color: #f2f2f2;
+
+}
+footer{
+	background: #333;
+	color: white;
+	padding: 0.25em;
+}
+h2{
+	font-size: 1.75em;
+	font-weight: bold;
+}
+h3{
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-top: 1.5em;
+}
+p{
+	margin: 1em 0;
+	line-height: 1.3rem;
+}
+cite.oeuvre, blockquote, q, em{
+	font-style: italic;
+}
+blockquote{
+	line-height: 1.25em;
+	font-size: 0.9em;
+	padding: 0 4em;
+}
+sup{
+	vertical-align: super;
+	font-size: 0.75em; 
+}
+hr{
+	margin: 2em 0em 1em 0em;
+}
+
+/**************/
+/*   Header   */
+/**************/
+.main_header{
+	position: relative;
+	margin: 10px 0px 25px 0px;
+}
+h1 a{
+	text-indent: -5000px;
+	display: block;
+	width:147px;
+	height: 100px;
+	background-image:url('../img/logo.jpg'); 
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+.main_nav{
+	background-color: #3DBD99;
+	position: absolute;
+	top:37px;
+	right: 0px;
+	width: 80%;
+}
+.main_nav h2{
+	display: none;
+}
+body header nav ul li{
+	display: inline-block;
+}
+body header nav ul li a{
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	font-size: 1.25em;
+}
+
+/**********************/
+/*   Article header   */
+/**********************/
+article header {
+	margin-top: 50px;
+}
+article header h2{
+	margin-bottom: 0.5em;
+}
+article header ul li {
+	display: inline-block;
+}
+
+/*************/
+/*   Notes   */
+/*************/
+.endNotes{
+	font-size: 0.9em;
+	margin: 1em 0;
+}
+.endNotes li{
+	margin: 0.5em 0;
+} 
+.endNotes blockquote{
+	line-height: 1.25em;
+	font-size: 1em;
+	padding: 0em;
+	display: inline;
+}
+.endNotes h3{
+	margin-bottom: 10px;
+}
+
+/**********************/
+/*   En savoir plus   */
+/**********************/
+
+.filmo h3{
+	margin-bottom: 15px;
+	margin-top: 25px;
+}
+
+table {
+	width: 100%;
+	text-align: center;
+}
+table caption{
+	margin-bottom: 10px;
+	display: none;
+}
+table, td, th{
+	border: 1px solid black;
+	padding: 5px 2px;
+}
+table a{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/**************/
+/* Formulaire */
+/**************/
+section form{
+	width: 68%;
+}
+.required{
+	font-size: 0.8em;
+	margin: 0 0 20px 0;
+}
+label,input, .pseudo, .mail{
+	
+}
+.civil label{
+	background-color: #eee;
+	width: 174px;
+	display: inline-block;
+	padding: 10px;
+}
+.civil label:hover{
+	background-color: rgb(59, 153, 252);
+	color: white;
+}
+.civil li{
+	width: 33%;
+	display: inline-block;
+}
+.pseudo label, .mail label, .commentaire label{
+	display: block;
+	margin-bottom: 0.5em;
+}
+.pseudo input, .mail input{
+	padding:10px 20px;
+	width: 610px;
+}
+.pays, .cote{
+	display: inline-block;
+}
+.pays{
+	margin-right: 2em;
+}
+select{
+	padding: 10px;
+	border: none;
+	display: inline-block;
+	font-family: inherit;
+	font-size: 0.8em;
+	height: 30px;
+	margin-right: auto;
+}
+.cote input{
+	padding:10px 20px;
+}
+textarea{
+	width: 648px;
+	min-height: 150px;
+}
+.newsletter{
+	margin: -10px 0 20px 0;
+}
+section input[type="submit"]{
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	font-family: inherit;
+	background-color: rgb(59, 153, 252);
+	color: white;
+	border: none;
+	border-radius: 0.25em;
+}
+/*************/
+/*   Aside   */
+/*************/
+
+aside nav ul li a{
+	display: block;
+	text-decoration: none;
+	background-color: #F7FCFB;
+	border-left: 1px solid #3DBD99;
+	padding: 1em 1em;
+	font-size: 0.9em;
+	color: #2E8E73;
+	font-weight: bold;
+}
+aside nav{
+	margin-bottom: 2em;
+}
+aside h2{
+	margin-top: 0;
+	margin-bottom: 1em;
+	font-size: 1.25em;
+	display: none;
+}
+aside nav h3{
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+aside dl{
+	font-size: 0.8em;
+	padding:0em 1em 1em 1em;
+
+}
+aside nav dl dt{
+	margin: 1em 0em 0.25em 0em; 
+}
+aside nav dl dt a{
+	background-color: transparent;
+	border-left: none;
+	padding: 0;
+	font-size: 1em;
+	margin-bottom: 0.25em;	
+}
+/**************/
+/*   Footer   */
+/**************/
+footer{
+	font-size: 0.8em;
+	color: #eee;
+	padding: 10px;
+	margin-top: 100px;
+}
+footer p{
+	margin: 0;
+	padding: 0;
+}

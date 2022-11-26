@@ -1,4 +1,4 @@
-@import url(http://fonts.bunny.net/css?family=Patua+One|Source+Sans+Pro);
+@import url(http://fonts.bunny.net/css?family=patua-one:400|source-sans-3:400,400i,700,700i,900,900i);
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 @import 'utilities/normalize.scss';
 
@@ -16,16 +16,42 @@
   clip-path: inset(50%) !important; /* 2 */
 }
 
+@mixin green-box-with-border {
+  padding: 1rem;
+  background-color: #F8FCFB;
+  border-left: 0.1rem solid #58947F;
+}
+
 /***************/
 /*   General   */
 /***************/
 html {
   background-color: white !important;
-  font: 18px/1.5 'Source Sans Pro', sans-serif;
+  font: 18px/1.5 "Source Sans 3", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Patua One", serif;
+  font-family: "Patua One", display;
+}
+
+a {
+  text-underline-offset: 0.3rem;
+}
+
+a:hover {
+  text-decoration-thickness: 0.2rem;
+}
+
+q, blockquote {
+  font-style: italic;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-weight: bold;
 }
 
 body {
@@ -36,8 +62,12 @@ body {
           "e e";
   max-width: 64rem;
   margin: 1rem auto;
-  background-color: rgb(250, 250, 250);
+  /*background-color: rgb(250, 250, 250);*/
   gap: 2rem;
+}
+
+body > div:first-child {
+  @include sr-only;
 }
 
 /** Header **/
@@ -53,9 +83,6 @@ body > header h1 {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  /** Déco **/
-
-  /** Masquage du texte **/
 }
 
 body > header h1 a {
@@ -91,7 +118,6 @@ body > header nav ul a {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.1em;
-  text-underline-offset: 0.3em;
 }
 
 body > header nav form label {
@@ -101,10 +127,17 @@ body > header nav form label {
   letter-spacing: 0.1em;
 }
 
-body > header nav form input {
+body > header nav form label small {
+  text-transform: lowercase;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
+body > header nav form input, body > header nav form button {
   padding: 0.5em;
   border: 1px solid grey;
   border-radius: 0.2em;
+  line-height: 1.5;
 }
 
 /** Main **/
@@ -115,13 +148,83 @@ body > main {
 
 body > main > article > header img {
   width: 100%;
+  height: auto;
 }
+
+body > main > article > header h2 {
+  margin: 1rem 0;
+}
+
+body > main > article > header nav h3 {
+  @include sr-only;
+}
+
+div[itemprop="articleBody"] {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+div[itemprop="articleBody"] section:first-child h3 {
+  @include sr-only;
+}
+
+div[itemprop="articleBody"] blockquote p {
+  margin: 0;
+}
+
+div[itemprop="articleBody"] blockquote:before {
+  content: "« ";
+  font-size: 3rem;
+  font-style: italic;
+  position: relative;
+  top: 2rem;
+  left: -2rem;
+}
+
+div[itemprop="articleBody"] blockquote:after {
+  display: block;
+  content: " »";
+  font-size: 3rem;
+  font-style: italic;
+  text-align: right;
+  position: relative;
+  top: -3rem;
+  right: -1rem
+}
+
+div[itemprop="articleBody"] table {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+div[itemprop="articleBody"] caption {
+  margin-bottom: 1rem;
+}
+
+div[itemprop="articleBody"] td, div[itemprop="articleBody"] th, div[itemprop="articleBody"] table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+div[itemprop="articleBody"] th {
+  padding: 0.5rem 1rem;
+}
+
+div[itemprop="articleBody"] td {
+  text-align: right;
+  padding: 0.5rem 1rem;
+}
+
+div[itemprop="articleBody"] hr {
+  border-color: lightgrey;
+}
+
 
 body > aside {
   grid-area: d;
-/*  display: inline-flex;
-  flex-direction: column;*/
-  padding: 0 1rem;
+  align-self: start;
+  padding: 0 1rem 1rem;
   background-color: #F2F2F2;
 }
 
@@ -146,7 +249,7 @@ body > aside dl {
 
 body > aside dt a {
   color: #58947F;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 body > aside dd {
@@ -157,11 +260,15 @@ body > aside section:first-of-type {
   margin-bottom: 2rem;
 }
 
-body > aside section:last-child h3 {
+body > aside section:first-of-type h3 {
+  margin: 1rem 0;
+}
+
+body > aside section:last-of-type h3 {
   @include sr-only;
 }
 
-body > aside section:last-child img {
+body > aside section:last-of-type img {
   width: 100%;
 }
 
@@ -169,10 +276,13 @@ body > aside nav:nth-of-type(1) {
   margin-bottom: 2rem;
 }
 
+body > aside nav:nth-of-type(1) h4 {
+  @include green-box-with-border;
+  color: #58947F;
+}
+
 body > aside nav:nth-of-type(2) {
-  padding: 0.2rem 1rem;
-  background-color: #F8FCFB;
-  border-left: 0.1rem solid #58947F;
+  @include green-box-with-border;
 }
 
 body > aside nav:nth-of-type(2) h4 {
@@ -180,6 +290,7 @@ body > aside nav:nth-of-type(2) h4 {
 }
 
 body > aside nav:nth-of-type(2) ul {
+  margin: 0;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -188,9 +299,7 @@ body > aside nav:nth-of-type(2) ul {
 body > aside nav:nth-of-type(2) a {
   font-weight: bold;
   color: #58947F;
-  text-underline-offset: 0.3em;
 }
-
 
 body > footer {
   grid-area: e;

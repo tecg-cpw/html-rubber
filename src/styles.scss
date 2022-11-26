@@ -119,8 +119,10 @@ body > main > article > header img {
 
 body > aside {
   grid-area: d;
+/*  display: inline-flex;
+  flex-direction: column;*/
+  padding: 0 1rem;
   background-color: #F2F2F2;
-  padding: 0 2rem;
 }
 
 body > aside h2 {
@@ -143,13 +145,52 @@ body > aside dl {
 }
 
 body > aside dt a {
-  font-weight: bold;
   color: #58947F;
+  font-weight: bold;
 }
 
 body > aside dd {
   margin: 0;
 }
+
+body > aside section:first-of-type {
+  margin-bottom: 2rem;
+}
+
+body > aside section:last-child h3 {
+  @include sr-only;
+}
+
+body > aside section:last-child img {
+  width: 100%;
+}
+
+body > aside nav:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+
+body > aside nav:nth-of-type(2) {
+  padding: 0.2rem 1rem;
+  background-color: #F8FCFB;
+  border-left: 0.1rem solid #58947F;
+}
+
+body > aside nav:nth-of-type(2) h4 {
+  @include sr-only;
+}
+
+body > aside nav:nth-of-type(2) ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+body > aside nav:nth-of-type(2) a {
+  font-weight: bold;
+  color: #58947F;
+  text-underline-offset: 0.3em;
+}
+
 
 body > footer {
   grid-area: e;

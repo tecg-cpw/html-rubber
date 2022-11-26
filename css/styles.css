@@ -417,8 +417,10 @@ body > main > article > header img {
 
 body > aside {
   grid-area: d;
+  /*  display: inline-flex;
+    flex-direction: column;*/
+  padding: 0 1rem;
   background-color: #F2F2F2;
-  padding: 0 2rem;
 }
 
 body > aside h2 {
@@ -451,12 +453,70 @@ body > aside dl {
 }
 
 body > aside dt a {
-  font-weight: bold;
   color: #58947F;
+  font-weight: bold;
 }
 
 body > aside dd {
   margin: 0;
+}
+
+body > aside section:first-of-type {
+  margin-bottom: 2rem;
+}
+
+body > aside section:last-child h3 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+}
+
+body > aside section:last-child img {
+  width: 100%;
+}
+
+body > aside nav:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+
+body > aside nav:nth-of-type(2) {
+  padding: 0.2rem 1rem;
+  background-color: #F8FCFB;
+  border-left: 0.1rem solid #58947F;
+}
+
+body > aside nav:nth-of-type(2) h4 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+}
+
+body > aside nav:nth-of-type(2) ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+body > aside nav:nth-of-type(2) a {
+  font-weight: bold;
+  color: #58947F;
+  text-underline-offset: 0.3em;
 }
 
 body > footer {

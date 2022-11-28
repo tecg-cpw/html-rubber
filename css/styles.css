@@ -357,21 +357,6 @@ input[type=text], input[type=number], input[type=email], input[type=search], but
   line-height: 1.5;
 }
 
-dl {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-dl div {
-  display: flex;
-}
-
-dt {
-  font-weight: bold;
-  flex-basis: 10ch;
-}
-
 body {
   display: grid;
   grid-template: "a a" "c d" "e e";
@@ -584,6 +569,21 @@ main form input[type=text], main form input[type=number], main form input[type=e
 
 main form textarea {
   padding: 0.5rem;
+}
+
+main dl {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main dl div {
+  display: flex;
+}
+
+main dt {
+  font-weight: bold;
+  flex-basis: 10ch;
 }
 
 body > aside {

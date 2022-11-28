@@ -65,12 +65,27 @@ figcaption {
   font-weight: bold;
 }
 
-fieldset{
-  border-color: rgba(0,0,0,.5);
+fieldset {
+  border-color: rgba(0, 0, 0, .5);
 }
 
 input[type=text], input[type=number], input[type=email], input[type=search], button, select {
   @include inputs;
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+dl div{
+  display: flex;
+}
+
+dt {
+  font-weight: bold;
+  flex-basis: 10ch;
 }
 
 body {
@@ -244,13 +259,13 @@ main form {
   gap: 2rem;
 }
 
-main form input[type=text], main form input[type=number], main form input[type=email], main form textarea{
+main form input[type=text], main form input[type=number], main form input[type=email], main form textarea {
   width: 100%;
   box-sizing: border-box;
 }
 
-main form textarea{
-  padding:0.5rem;
+main form textarea {
+  padding: 0.5rem;
 }
 
 body > aside {
@@ -346,6 +361,6 @@ body > footer {
   padding: 0.5rem;
 }
 
-body > footer a{
+body > footer a {
   color: white;
 }

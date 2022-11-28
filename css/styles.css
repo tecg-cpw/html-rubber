@@ -357,6 +357,21 @@ input[type=text], input[type=number], input[type=email], input[type=search], but
   line-height: 1.5;
 }
 
+dl {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+dl div {
+  display: flex;
+}
+
+dt {
+  font-weight: bold;
+  flex-basis: 10ch;
+}
+
 body {
   display: grid;
   grid-template: "a a" "c d" "e e";

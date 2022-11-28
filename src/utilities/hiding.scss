@@ -1,9 +1,0 @@
-body > header h1 {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-body > header nav h2{
-  @include sr-only;
-}

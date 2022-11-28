@@ -322,6 +322,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Patua One", display;
 }
 
+:target {
+  background-color: yellow;
+}
+
 a {
   text-underline-offset: 0.3rem;
 }
@@ -340,6 +344,17 @@ figure {
 
 figcaption {
   font-weight: bold;
+}
+
+fieldset {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+input[type=text], input[type=number], input[type=email], input[type=search], button, select {
+  padding: 0.5em;
+  border: 1px solid grey;
+  border-radius: 0.2em;
+  line-height: 1.5;
 }
 
 body {
@@ -393,6 +408,7 @@ body > header nav {
   justify-content: space-between;
   padding: 0.2rem 1rem;
   margin: 2rem 0 0.5rem;
+  background-color: #2E614D;
 }
 
 body > header nav h2 {
@@ -435,13 +451,6 @@ body > header nav form label small {
   text-transform: lowercase;
   letter-spacing: normal;
   font-weight: normal;
-}
-
-body > header nav form input, body > header nav form button {
-  padding: 0.5em;
-  border: 1px solid grey;
-  border-radius: 0.2em;
-  line-height: 1.5;
 }
 
 /** Main **/
@@ -499,21 +508,23 @@ div[itemprop=articleBody] blockquote p {
 div[itemprop=articleBody] blockquote:before {
   content: "« ";
   font-size: 3rem;
+  line-height: 0;
   font-style: italic;
   position: relative;
   top: 2rem;
   left: -2rem;
+  color: #2E614D;
 }
 
 div[itemprop=articleBody] blockquote:after {
-  display: block;
   content: " »";
   font-size: 3rem;
+  line-height: 0;
   font-style: italic;
   text-align: right;
-  position: relative;
-  top: -3rem;
-  right: -1rem;
+  display: block;
+  margin-bottom: 3rem;
+  color: #2E614D;
 }
 
 div[itemprop=articleBody] table {
@@ -541,6 +552,23 @@ div[itemprop=articleBody] td {
 
 div[itemprop=articleBody] hr {
   border-color: lightgrey;
+}
+
+main form {
+  max-width: 75%;
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main form input[type=text], main form input[type=number], main form input[type=email], main form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main form textarea {
+  padding: 0.5rem;
 }
 
 body > aside {
@@ -580,7 +608,7 @@ body > aside dl {
 }
 
 body > aside dt a {
-  color: #58947F;
+  color: #2E614D;
   font-weight: 900;
 }
 
@@ -612,6 +640,7 @@ body > aside section:last-of-type h3 {
 
 body > aside section:last-of-type img {
   width: 100%;
+  height: auto;
 }
 
 body > aside nav:nth-of-type(1) {
@@ -621,14 +650,14 @@ body > aside nav:nth-of-type(1) {
 body > aside nav:nth-of-type(1) h4 {
   padding: 1rem;
   background-color: #F8FCFB;
-  border-left: 0.1rem solid #58947F;
-  color: #58947F;
+  border-left: 0.1rem solid #2E614D;
+  color: #2E614D;
 }
 
 body > aside nav:nth-of-type(2) {
   padding: 1rem;
   background-color: #F8FCFB;
-  border-left: 0.1rem solid #58947F;
+  border-left: 0.1rem solid #2E614D;
 }
 
 body > aside nav:nth-of-type(2) h4 {
@@ -654,15 +683,22 @@ body > aside nav:nth-of-type(2) ul {
 
 body > aside nav:nth-of-type(2) a {
   font-weight: bold;
-  color: #58947F;
+  color: #2E614D;
 }
 
 body > footer {
   grid-area: e;
 }
 
-body > header nav {
-  background-color: #63B799;
+body > footer {
+  background-color: #2E614D;
+  color: white;
+  text-align: right;
+  padding: 0.5rem;
+}
+
+body > footer a {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

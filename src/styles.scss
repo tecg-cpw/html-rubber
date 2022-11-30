@@ -74,17 +74,15 @@ input[type=text], input[type=number], input[type=email], input[type=search], but
 }
 
 
-
 body {
   display: grid;
   grid-template:
           "a a"
           "c d"
           "e e";
+  grid-template-columns: 70% 30%;
   max-width: 64rem;
   margin: 1rem auto;
-  /*background-color: rgb(250, 250, 250);*/
-  gap: 2rem;
 }
 
 
@@ -98,6 +96,7 @@ body > header {
   display: flex;
   grid-area: a;
   column-gap: 2rem;
+  min-height: 8.333333334rem;
 }
 
 body > header h1 {
@@ -109,15 +108,19 @@ body > header h1 {
 
 body > header h1 a {
   display: block;
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
   background: #fff url("../img/logo.svg") 0 0 no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
 body > header nav {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
   padding: 0.2rem 1rem;
   margin: 2rem 0 0.5rem;
@@ -179,6 +182,7 @@ div[itemprop="articleBody"] {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  padding-right: 2rem;
 }
 
 div[itemprop="articleBody"] section:first-child h3 {
@@ -261,7 +265,7 @@ main dl {
   gap: 1rem;
 }
 
-main dl div{
+main dl div {
   display: flex;
 }
 

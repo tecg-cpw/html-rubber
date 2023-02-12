@@ -317,7 +317,12 @@ html {
   padding: 0 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Patua One", display, serif;
 }
 
@@ -337,7 +342,8 @@ cite {
   font-weight: bold;
 }
 
-q, blockquote {
+q,
+blockquote {
   font-style: italic;
 }
 
@@ -353,7 +359,12 @@ fieldset {
   border-color: rgba(0, 0, 0, 0.5);
 }
 
-input[type=text], input[type=number], input[type=email], input[type=search], button, select {
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=search],
+button,
+select {
   padding: 0.5em;
   border: 1px solid grey;
   border-radius: 0.2em;
@@ -414,7 +425,7 @@ body > header nav {
   justify-content: space-between;
   padding: 0.2rem 1rem;
   margin: 2rem 0 0.5rem;
-  background-color: #2E614D;
+  background-color: #2e614d;
 }
 
 body > header nav h2 {
@@ -520,7 +531,7 @@ article header nav h3 {
   position: relative;
   top: 2rem;
   left: -2rem;
-  color: #2E614D;
+  color: #2e614d;
 }
 
 .article-body blockquote:after {
@@ -532,7 +543,7 @@ article header nav h3 {
   display: block;
   margin-right: -2rem;
   margin-bottom: 3rem;
-  color: #2E614D;
+  color: #2e614d;
 }
 
 table {
@@ -544,12 +555,15 @@ caption {
   margin-bottom: 1rem;
 }
 
-td, th, table {
+td,
+th,
+table {
   border-collapse: collapse;
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   padding: 0.5rem 1rem;
 }
 
@@ -569,7 +583,10 @@ main form {
   gap: 2rem;
 }
 
-main form input[type=text], main form input[type=number], main form input[type=email], main form textarea {
+main form input[type=text],
+main form input[type=number],
+main form input[type=email],
+main form textarea {
   width: 100%;
   box-sizing: border-box;
 }
@@ -598,7 +615,7 @@ aside {
   grid-area: d;
   align-self: start;
   padding: 0 1rem 1rem;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 aside h2 {
@@ -631,7 +648,7 @@ aside dl {
 }
 
 aside dt a {
-  color: #2E614D;
+  color: #2e614d;
   font-weight: 900;
 }
 
@@ -672,15 +689,15 @@ aside nav:nth-of-type(1) {
 
 aside nav:nth-of-type(1) h4 {
   padding: 1rem;
-  background-color: #F8FCFB;
-  border-left: 0.1rem solid #2E614D;
-  color: #2E614D;
+  background-color: #f8fcfb;
+  border-left: 0.1rem solid #2e614d;
+  color: #2e614d;
 }
 
 aside nav:nth-of-type(2) {
   padding: 1rem;
-  background-color: #F8FCFB;
-  border-left: 0.1rem solid #2E614D;
+  background-color: #f8fcfb;
+  border-left: 0.1rem solid #2e614d;
 }
 
 aside nav:nth-of-type(2) h4 {
@@ -706,13 +723,13 @@ aside nav:nth-of-type(2) ul {
 
 aside nav:nth-of-type(2) a {
   font-weight: bold;
-  color: #2E614D;
+  color: #2e614d;
 }
 
 /* Pied de page */
 body > footer {
   grid-area: e;
-  background-color: #2E614D;
+  background-color: #2e614d;
   color: white;
   text-align: right;
   padding: 0.5rem;

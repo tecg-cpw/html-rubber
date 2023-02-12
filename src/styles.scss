@@ -1,7 +1,7 @@
 @import url(https://fonts.bunny.net/css?family=patua-one:400|source-sans-3:400,400i,700,700i,900,900i);
-@import 'utilities/normalize.scss';
+@import "utilities/normalize.scss";
 
-$accent_color: #2E614D;
+$accent_color: #2e614d;
 
 @mixin sr-only {
   position: absolute !important;
@@ -19,7 +19,7 @@ $accent_color: #2E614D;
 
 @mixin green-box-with-border {
   padding: 1rem;
-  background-color: #F8FCFB;
+  background-color: #f8fcfb;
   border-left: 0.1rem solid $accent_color;
 }
 
@@ -39,7 +39,12 @@ html {
   padding: 0 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Patua One", display, serif;
 }
 
@@ -59,7 +64,8 @@ cite {
   font-weight: bold;
 }
 
-q, blockquote {
+q,
+blockquote {
   font-style: italic;
 }
 
@@ -72,25 +78,28 @@ figcaption {
 }
 
 fieldset {
-  border-color: rgba(0, 0, 0, .5);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
-input[type=text], input[type=number], input[type=email], input[type=search], button, select {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+button,
+select {
   @include inputs;
 }
-
 
 body {
   display: grid;
   grid-template:
-          "a a"
-          "c d"
-          "e e";
+    "a a"
+    "c d"
+    "e e";
   grid-template-columns: 70% 30%;
   max-width: 64rem;
   margin: 1rem auto;
 }
-
 
 .skip-main-navigation {
   @include sr-only;
@@ -230,12 +239,15 @@ caption {
   margin-bottom: 1rem;
 }
 
-td, th, table {
+td,
+th,
+table {
   border-collapse: collapse;
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   padding: 0.5rem 1rem;
 }
 
@@ -255,7 +267,10 @@ main form {
   gap: 2rem;
 }
 
-main form input[type=text], main form input[type=number], main form input[type=email], main form textarea {
+main form input[type="text"],
+main form input[type="number"],
+main form input[type="email"],
+main form textarea {
   width: 100%;
   box-sizing: border-box;
 }
@@ -284,7 +299,7 @@ aside {
   grid-area: d;
   align-self: start;
   padding: 0 1rem 1rem;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 aside h2 {
